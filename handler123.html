@@ -1,0 +1,63 @@
+<!Doctype html>
+<html>
+  <head>
+     <title>Button handler</title>
+	 <style>
+	     
+	                                     
+	 #guy {
+	       position:absolute;
+		   height:50px;
+		   width:50px;
+		   top:300px;
+		   left:600px;
+		   
+		   
+		   
+	      
+	 }
+	 
+	 
+	 </style>
+  </head>
+  
+   <body background="stars.gif">
+     <h1>click to move</h1>
+       
+	   
+	     <div id="guy">
+		   <img src="rocket1.png" id="slika" width="100px"; height="50px";>
+		 </div>
+	  
+	   
+	   
+	     <script>
+		      var guy=document.getElementById("guy");
+			
+			  
+			  var obj=600;
+			  var obj1=300;
+			  
+			  function anim(e) {
+			   if(e.keyCode==39) {
+			       obj +=4;
+				   guy.style.left =obj + 'px';
+			   }
+			   if(e.keyCode==37) {
+			   obj-=4;
+			   guy.style.left =obj + 'px';
+			   }
+			   if(e.keyCode==38) {
+			   obj1-=4;
+			   guy.style.top =obj1 + 'px';
+			   }
+		        if(e.keyCode==40) {
+			  obj1 +=4;
+			   guy.style.top=obj1 +'px';
+			   }
+			 }
+			  document.onkeydown=anim;
+		 </script>
+   </body>
+   
+</html>
